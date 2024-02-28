@@ -40,5 +40,9 @@ while game_is_on:
     #Detect collision with l_paddle
     if ball.distance(l_paddle) < 50 and ball.xcor() < -320:
         ball.bounce_x()
+        
+    #Detect a ball goes out of bounds
+    if ball.xcor() > 390 or ball.xcor() < -390:
+        ball.restart()
 
 screen.exitonclick()
